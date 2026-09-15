@@ -76,17 +76,18 @@
 </section>
 
 <section>
-  <h2><span class="n">2</span>カルテ Phase1 ＝ 28万円（内訳）</h2>
-  <p class="lead">まず“形にして運用開始”できる最小構成。写真OCRは含めず後追い。</p>
+  <h2><span class="n">2</span>カルテ ＝ 28万円（写真OCR込み・内訳）</h2>
+  <p class="lead">ログイン・入力・カルテ表示・写真OCRまで含む一式。</p>
   <table>
     <tr><th>項目</th><th>やること</th><th>金額</th></tr>
     <tr><td>基盤構築</td><td>Next.js＋Supabase接続＋Vercel公開（広告ダッシュと同構成で立上げ）</td><td class="y">4万</td></tr>
-    <tr><td>ログイン・権限</td><td>会員番号＋PW（bcrypt）／本人のカルテだけ表示／スタッフ=自店・マスター=全店</td><td class="y">4.5万</td></tr>
-    <tr><td>会員名簿の自動同期</td><td>hacomonoの会員データを取り込み members に自動登録（手入力名簿を作らない）</td><td class="y">5.5万</td></tr>
-    <tr><td>入力・種目・登録</td><td>測定値入力フォーム／種目マスタ（3000m等後付け可）／アスリート対象化／初期PW発行</td><td class="y">6万</td></tr>
-    <tr><td>カルテ表示</td><td>モックv2を実データ化（推移グラフ・自己ベスト・前回比・競技別重点・ランキング=イニシャル）</td><td class="y">6万</td></tr>
-    <tr><td>検証・調整</td><td>本人分離テスト・360/375pxレスポンシブ・目視QA・修正</td><td class="y">2万</td></tr>
-    <tr class="tot"><td colspan="2">合計（Phase1）</td><td class="y">28万円</td></tr>
+    <tr><td>ログイン・権限</td><td>会員番号＋PW（bcrypt）／本人のカルテだけ表示／スタッフ=自店・マスター=全店</td><td class="y">4万</td></tr>
+    <tr><td>会員名簿の自動同期</td><td>hacomonoの会員データを取り込み members に自動登録（手入力名簿を作らない）</td><td class="y">5万</td></tr>
+    <tr><td>入力・種目・登録</td><td>測定値入力フォーム／種目マスタ（3000m等後付け可）／アスリート対象化／初期PW発行</td><td class="y">5万</td></tr>
+    <tr><td>カルテ表示</td><td>モックv2を実データ化（推移グラフ・自己ベスト・前回比・競技別重点・ランキング=イニシャル）</td><td class="y">5万</td></tr>
+    <tr><td>写真OCR</td><td>紙の記録用紙を撮影→Claude visionで数値抽出→確認・修正して保存（元画像も保管）</td><td class="y">4万</td></tr>
+    <tr><td>検証・調整</td><td>本人分離テスト・360/375pxレスポンシブ・目視QA・修正</td><td class="y">1万</td></tr>
+    <tr class="tot"><td colspan="2">合計</td><td class="y">28万円</td></tr>
   </table>
   <div class="opt">
     <b>月額伴走＝3万/月</b>：Supabase/Vercel実費＋リリース後の追加項目・保守。
@@ -112,7 +113,7 @@
 <section>
   <h2><span class="n">4</span>まとめ（見せ方の一案）</h2>
   <div class="big">
-    <div class="c"><div class="v">28万</div><div class="l">カルテ Phase1（月額3万）</div></div>
+    <div class="c"><div class="v">28万</div><div class="l">カルテ（写真OCR込み・月額3万）</div></div>
     <div class="c"><div class="v">5万</div><div class="l">松尾さん連携</div></div>
   </div>
   <p class="kv">初期の見せ金額 <b>28万＋5万＝33万</b>。値上げ原資 月9.5万で <b>約3.5ヶ月で回収</b>。</p>
