@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>アスリートカルテ 見積もり</title>
+<style>
+  :root{
+    --ink:#1f2937; --mut:#6b7280; --line:#e2e8f0; --bg:#f6f8fc; --card:#fff;
+    --acc:#1d4ed8; --acc2:#2563eb; --ok:#059669; --okbg:#ecfdf5; --okline:#a7f3d0;
+    --warn:#b45309; --warnbg:#fffbeb; --warnline:#fde68a; --pill:#eef2ff;
+  }
+  *{box-sizing:border-box;}
+  body{margin:0;background:var(--bg);color:var(--ink);line-height:1.7;
+    font-family:-apple-system,BlinkMacSystemFont,"Hiragino Kaku Gothic ProN","Noto Sans JP",sans-serif;}
+  .wrap{max-width:960px;margin:0 auto;padding:24px 16px 64px;}
+  header{text-align:center;padding:28px 16px 18px;}
+  header h1{font-size:25px;font-weight:800;margin:0;letter-spacing:.02em;}
+  header .sub{color:var(--mut);font-size:13px;margin-top:8px;}
+  header .tag{display:inline-block;background:var(--pill);color:var(--acc);font-size:12px;font-weight:700;
+    padding:4px 12px;border-radius:999px;margin-top:12px;}
+  section{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:22px 20px;margin-top:18px;
+    box-shadow:0 6px 24px rgba(29,78,216,.05);}
+  h2{font-size:18px;font-weight:800;margin:0 0 14px;display:flex;align-items:center;gap:9px;}
+  h2 .n{background:linear-gradient(135deg,var(--acc),var(--acc2));color:#fff;width:28px;height:28px;border-radius:8px;
+    display:inline-flex;align-items:center;justify-content:center;font-size:14px;flex:none;}
+  p{margin:6px 0;}
+  .lead{color:var(--mut);font-size:13px;margin:-4px 0 10px;}
+  table{width:100%;border-collapse:collapse;font-size:13.5px;margin-top:6px;}
+  th,td{border:1px solid var(--line);padding:9px 11px;text-align:left;vertical-align:top;}
+  th{background:var(--bg);font-weight:700;}
+  td.y{white-space:nowrap;font-weight:800;color:var(--acc);text-align:right;}
+  tr.tot td{background:#eef4ff;font-weight:800;}
+  tr.tot td.y{color:#0b3ea8;font-size:15px;}
+  .big{display:flex;flex-wrap:wrap;gap:12px;margin:6px 0;}
+  .big .c{flex:1;min-width:160px;border:1px solid var(--line);border-radius:12px;padding:14px;text-align:center;background:var(--bg);}
+  .big .c .v{font-size:24px;font-weight:800;color:var(--acc);}
+  .big .c .l{font-size:12px;color:var(--mut);margin-top:4px;}
+  .ok{background:var(--okbg);border:1px solid var(--okline);color:#065f46;border-radius:12px;padding:12px 14px;font-size:13px;margin:10px 0;}
+  .warn{background:var(--warnbg);border:1px solid var(--warnline);color:#92400e;border-radius:12px;padding:12px 14px;font-size:12.5px;margin:10px 0;}
+  .kv{font-size:13.5px;}
+  .kv b{color:var(--acc);}
+  .note{font-size:11px;color:var(--mut);text-align:center;margin-top:26px;}
+  .storebar{display:flex;flex-wrap:wrap;gap:6px;margin:8px 0;}
+  .storebar span{background:var(--pill);color:var(--acc);font-size:12px;font-weight:700;border-radius:999px;padding:3px 11px;}
+  .opt{border-left:4px solid var(--acc);background:var(--bg);border-radius:0 12px 12px 0;padding:12px 14px;margin:8px 0;font-size:13px;}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <h1>アスリートカルテ＋松尾さん連携 見積もり</h1>
+  <div class="sub">2026-09-15／根拠：hacomono会員データ 7店舗・2026-09時点</div>
+  <div class="tag">社内たたき台（金額は要裏取り・提示は鈴木さん）</div>
+</header>
+
+<section>
+  <h2><span class="n">◎</span>結論（先に3つ）</h2>
+  <div class="big">
+    <div class="c"><div class="v">195名</div><div class="l">アスリートコース会員（実質稼働190名）</div></div>
+    <div class="c"><div class="v">+9.7万/月</div><div class="l">+500円値上げの原資（年117万）</div></div>
+    <div class="c"><div class="v">初期33万</div><div class="l">カルテ28万＋連携5万・約3.5ヶ月で回収</div></div>
+  </div>
+  <p class="kv">写真OCRは後追い <b>＋12万</b>／カルテ月額 <b>3万/月</b>（サーバー・改修・保守）。</p>
+</section>
+
+<section>
+  <h2><span class="n">1</span>会員数と「+500円」の原資</h2>
+  <p class="lead">アプリで質を上げる代わりの+500円値上げ。その原資がアプリ費用を吸収する。</p>
+  <div class="storebar">
+    <span>祖師ヶ谷大蔵 45</span><span>船橋 44</span><span>東日本橋 34</span><span>巣鴨 28</span><span>中目黒 24</span><span>春日 11</span><span>下北沢 9</span>
+  </div>
+  <p class="kv"><b>アスリートコース会員 合計 195名</b>（退会手続きなし＝実質190名）。全メンバー1,734名から「アスリートコース」オプション保有で抽出。</p>
+  <div class="ok">195名 × 500円 = <b>97,500円/月（年117万）</b>／ 実質190名なら 95,000円/月。この原資で開発費・月額を回収できる。</div>
+</section>
+
+<section>
+  <h2><span class="n">2</span>カルテ Phase1 ＝ 28万円（内訳）</h2>
+  <p class="lead">まず“形にして運用開始”できる最小構成。写真OCRは含めず後追い。</p>
+  <table>
+    <tr><th>項目</th><th>やること</th><th>金額</th></tr>
+    <tr><td>基盤構築</td><td>Next.js＋Supabase接続＋Vercel公開（広告ダッシュと同構成で立上げ）</td><td class="y">4万</td></tr>
+    <tr><td>ログイン・権限</td><td>会員番号＋PW（bcrypt）／本人のカルテだけ表示／スタッフ=自店・マスター=全店</td><td class="y">4.5万</td></tr>
+    <tr><td>会員名簿の自動同期</td><td>hacomonoの会員データを取り込み members に自動登録（手入力名簿を作らない）</td><td class="y">5.5万</td></tr>
+    <tr><td>入力・種目・登録</td><td>測定値入力フォーム／種目マスタ（3000m等後付け可）／アスリート対象化／初期PW発行</td><td class="y">6万</td></tr>
+    <tr><td>カルテ表示</td><td>モックv2を実データ化（推移グラフ・自己ベスト・前回比・競技別重点・ランキング=イニシャル）</td><td class="y">6万</td></tr>
+    <tr><td>検証・調整</td><td>本人分離テスト・360/375pxレスポンシブ・目視QA・修正</td><td class="y">2万</td></tr>
+    <tr class="tot"><td colspan="2">合計（Phase1）</td><td class="y">28万円</td></tr>
+  </table>
+  <div class="opt">
+    <b>写真OCR（後追い）＝＋12万</b>：紙を撮る→Claude visionで数値抽出（6万）＋確認・修正画面（4万）＋元画像保管（2万）。効果を見てから追加でOK。<br>
+    <b>月額伴走＝3万/月</b>：Supabase/Vercel実費＋リリース後の追加項目・保守。
+  </div>
+  <p class="kv">※PLダッシュ（給与・勘定科目マッチング・権限マトリクス）より軽い＝重い計算・多源泉取込が無いため。</p>
+</section>
+
+<section>
+  <h2><span class="n">3</span>松尾さん hacomono連携 ＝ 5万円（内訳）</h2>
+  <p class="lead">大幅改修ではない。“既存のCSV取込を自動で流すだけ”。仕組みも取込パーサも既に稼働済み。</p>
+  <table>
+    <tr><th>項目</th><th>やること</th><th>金額</th></tr>
+    <tr><td>取得の自動設定</td><td>今は体験予約(RL004)だけ取っている自動取得を、松尾さんが使うレポート（会員/売上）に向け直して自動DL</td><td class="y">2万</td></tr>
+    <tr><td>出力先へ流し込み</td><td>取れたCSVを業績ダッシュ（スプレッド/取込関数）へ自動で流す配線</td><td class="y">1.5万</td></tr>
+    <tr><td>毎日自動実行＋失敗通知</td><td>毎朝自動で回す／落ちたら通知（松尾さんの手作業をゼロに）</td><td class="y">1万</td></tr>
+    <tr><td>7店舗テスト・調整</td><td>7店舗分で数字が合うか突合して調整</td><td class="y">0.5万</td></tr>
+    <tr class="tot"><td colspan="2">合計</td><td class="y">5万円</td></tr>
+  </table>
+  <div class="ok">仕組み（hacomonoログイン→7店舗→CSV DL）は広告側で稼働済み・会員/売上の取込パーサも既存。だから“連携の配線＋自動化＋検証”だけ＝5万。会員CSVは個人情報を含むので先方側に直接入れて消す。</div>
+  <p class="kv">※「会員・売上・売上明細の3種＋監視強化」まで広げる場合だけ +α（〜8万）。まずは今の取込分の自動化＝5万で十分。</p>
+</section>
+
+<section>
+  <h2><span class="n">4</span>まとめ（見せ方の一案）</h2>
+  <div class="big">
+    <div class="c"><div class="v">28万</div><div class="l">カルテ Phase1（月額3万）</div></div>
+    <div class="c"><div class="v">5万</div><div class="l">松尾さん連携</div></div>
+    <div class="c"><div class="v">＋12万</div><div class="l">写真OCR（後追い）</div></div>
+  </div>
+  <p class="kv">初期の見せ金額 <b>28万＋5万＝33万</b>。値上げ原資 月9.5万で <b>約3.5ヶ月で回収</b>。</p>
+  <div class="warn">値引きの見せ方：定価を出し「開発に携わらせていただく御礼」で出精値引きを一言添えると、坪井さんとの関係も立つ／段階化（Phase1先行→OCR後追い）で初期負担を軽くできる。</div>
+</section>
+
+<p class="note">株式会社斗（hishaku）／2026-09-15 社内見積もりたたき台（要裏取り・提示は鈴木さん）</p>
+
+</div>
+</body>
+</html>
